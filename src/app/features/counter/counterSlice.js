@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const counterSlice = createSlice({
+export const counterSlice = createSlice({
     name: 'counter',
     initialState: {
         value: 0,
@@ -18,7 +18,7 @@ const counterSlice = createSlice({
             state.value -= 1
         },
         incrementByAmount: (state, action) => {
-            state.value += action.payload
+            state.value += Number(action.payload) || 0
         },
         toggleLogged: (state, action) => {
             state.isLogged = action.payload
