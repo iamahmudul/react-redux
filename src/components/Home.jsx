@@ -33,7 +33,7 @@ const Home = () => {
             <div>
                 {element}
             </div>
-            <Dummy />
+            <Dummy withText='This text is passed as attribute' />
             <hr />
             <p>Counter: {counter}</p>
             <div>
