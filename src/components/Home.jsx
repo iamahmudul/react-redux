@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement, toggleLogged, incrementByAmount, counterSlice } from "../app/features/counter/counterSlice";
 import { Dummy } from "./Dummy";
+import { LoginControl } from "./LoginControl";
 
 const Home = () => {
     const counter = useSelector(state => state.counter.value);
@@ -13,12 +14,12 @@ const Home = () => {
 
     const inc = () => {
         dispatch(increment());
-        dispatch(toggleLogged(true));
+        dispatch(toggleLogged(counter > 5 && counter < 15));
     }
 
     const dec = () => {
         dispatch(decrement());
-        dispatch(toggleLogged(false));
+        dispatch(toggleLogged(!(counter > 5 && counter < 15)));
     }
 
     const incValue = () => {
@@ -34,7 +35,7 @@ const Home = () => {
                 {element}
             </div>
             <Dummy withText='This text is passed as attribute' />
-            <hr />
+            <br />
             <p>Counter: {counter}</p>
             <div>
                 <button onClick={() => inc()} style={{padding: '2px 6px'}}>+</button>
@@ -46,8 +47,9 @@ const Home = () => {
             <div>
                 <button onClick={incValue} style={{padding: '2px 6px'}}>Add Value</button>
             </div>
-            {isLogged && 
-            <p>Logged in success </p>}
+            <br />
+
+            <LoginControl />
         </main>
     );
 }
