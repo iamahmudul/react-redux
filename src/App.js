@@ -6,6 +6,7 @@ import About from './components/About';
 import Home from './components/Home';
 import Nav from './components/Nav';
 import { Page } from './components/Page';
+import { TemparatureCalculator } from './components/TemparatureCalculator';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/page' element={<Page />} />
+        <Route path='/tempconvert' element={<TemparatureCalculator />} />
       </Routes>
       <Footer />
     </div>
