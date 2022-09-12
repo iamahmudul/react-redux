@@ -9,6 +9,7 @@ const Nav = () => {
                 <li><Link to='/contact'>Contact</Link></li>
                 <li><Link to='/page'>Page</Link></li>
                 <li><Link to='/tempconvert'>Converter</Link></li>
+                <li><Link to='/signup'>Sign Up</Link></li>
             </ul>
         </main>
     );

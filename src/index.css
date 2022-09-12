@@ -79,3 +79,22 @@ body {
 .Nav li > a:focus {
   background: grey;
 }
+
+.FancyBorder {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.FancyBorder.FancyBorder-blue {
+  border-color: blue;
+}
+
+.FancyBorder.FancyBorder-coral {
+  border-color: coral;
+}
+
+.SplitPane {
+  display: flex;
+  justify-content: space-around;
+}
